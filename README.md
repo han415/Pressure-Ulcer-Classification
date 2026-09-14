@@ -231,6 +231,28 @@ Multi-task 模型中約 **78% 的參數集中在共享的特徵提取層**，因
 * Model Pruning
 * Classification Attention
 
+## 視覺化成果與分析 
+
+### 1. 模型架構 
+本專案的最終最佳模型 Multi-task Learning，將特徵提取與三個分類任務（一般分類、嚴重度分類、3/4級分類）結合，透過共享權重來提升學習效果。
+![Multi-task 模型架構](./images/architecture.png)
+*(註：這裡請替換成你實際的圖片路徑)*
+
+### 2. 訓練過程與結果 
+透過 Loss 與 Accuracy 的變化，可觀察到模型在訓練過程中的收斂情況。
+![Accuracy Plot](./plots/efficientnet/accuracy_plot.png)
+![Loss Plot](./plots/efficientnet/loss_plot.png)
+
+### 3. 混淆矩陣 
+透過混淆矩陣可見，Multi-task 分類結果較其他任務理想，錯誤也較集中在相近類別，有效避免了跨多級別的嚴重誤判。
+![Confusion Matrix](./images/confusion_matrix.png)
+
+### 4. 分類關注區域與反思 
+這也是本研究最重要的發現之一。雖然 Multi-task 模型的 Accuracy 提高到了 0.88，但進一步透過 Grad-CAM 觀察模型的 Attention（熱力圖）後，我們發現**模型並沒有穩定集中在預期的傷口色彩變化區域上**。
+這代表模型可能學習到了背景的捷徑特徵 (Shortcut learning)，這解釋了為何 Loss 無法進一步下降，也為未來引入「色彩注意力機制」指明了改善方向。
+
+![模型關注區域動態變化](./gifs/heatmap.gif)
+
 ## 專題資訊
 
 **淡江大學 人工智慧學系**

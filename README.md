@@ -2,6 +2,24 @@
 運用深度學習進行壓瘡傷口影像分級與分析 (Pressure Ulcer Classification using Deep Learning)
 以深度學習分析壓瘡影像，探討不同分類方法在 Stage 1～4 分級上的表現。
 
+## Overview
+
+**研究流程：**
+`General Classification` ➔ `Image Reconstruction` ➔ `Ordinal Classification` ➔ `Multi-task Learning` ➔ `Feature Visualization` ➔ `Model Pruning`
+
+你可以直接點擊下方連結，檢視我們每個階段對應的實驗程式碼：
+
+| 研究階段 | 核心技術 | 對應程式碼 (Notebook) |
+| :--- | :--- | :--- |
+| **1. 基礎分類** | 比較 EfficientNet 與 ResNet 在壓瘡分級的表現 | [`efficientnet-pytorch.ipynb`](./efficientnet-pytorch.ipynb) |
+| **2. 影像重建** | 使用 Real-ESRGAN 強化傷口特徵 | [`real-esrgan.ipynb`](./real-esrgan.ipynb) |
+| **3. 序列分類** | 引入 Ordinal Classification | [`ordinal-classification.ipynb`](./ordinal-classification.ipynb) |
+| **4. 多任務學習** | **(最終最佳模型)** 將分類任務拆解共同學習 | [`MLT2_effi_ori.ipynb`](./MLT2_effi_ori.ipynb) |
+
+---
+（這裡就接著放你原本已經打好的「專案動機與目的」...）
+
+
 ## 專題簡介
 
 在傷口影像辨識中，不同類型的傷口通常有較明顯的差異，但如果是同一類型、不同嚴重程度的傷口，彼此之間的外觀差異可能非常細微。

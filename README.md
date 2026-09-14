@@ -14,7 +14,7 @@
 | **1. 基礎分類** | 比較 EfficientNet 與 ResNet 在壓瘡分級的表現 | [`efficientnet-pytorch.ipynb`](./efficientnet-pytorch.ipynb) |
 | **2. 影像重建** | 使用 Real-ESRGAN 強化傷口特徵 | [`real-esrgan.ipynb`](./real-esrgan.ipynb) |
 | **3. 序列分類** | 引入 Ordinal Classification | [`ordinal-classification.ipynb`](./ordinal-classification.ipynb) |
-| **4. 多任務學習** | **(最終最佳模型)** 將分類任務拆解共同學習 | [`MLT2_effi_ori.ipynb`](./MLT2_effi_ori.ipynb) |
+| **4. 多任務學習** | **(最終最佳模型)** 將分類任務拆解共同學習 | [`multi-task-learning.ipynb`](./multi-task-learning.ipynb) |
 
 ---
 （這裡就接著放你原本已經打好的「專案動機與目的」...）

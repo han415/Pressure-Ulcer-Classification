@@ -7,14 +7,14 @@
 **研究流程：**
 `General Classification` ➔ `Image Reconstruction` ➔ `Ordinal Classification` ➔ `Multi-task Learning` ➔ `Feature Visualization` ➔ `Model Pruning`
 
-你可以直接點擊下方連結，檢視我們每個階段對應的實驗程式碼：
-
 | 研究階段 | 核心技術 | 對應程式碼 (Notebook) |
 | :--- | :--- | :--- |
 | **1. 基礎分類** | 比較 EfficientNet 與 ResNet 在壓瘡分級的表現 | [`efficientnet-pytorch.ipynb`](./efficientnet-pytorch.ipynb) |
 | **2. 影像重建** | 使用 Real-ESRGAN 強化傷口特徵 | [`real-esrgan.ipynb`](./real-esrgan.ipynb) |
 | **3. 序列分類** | 引入 Ordinal Classification | [`ordinal-classification.ipynb`](./ordinal-classification.ipynb) |
 | **4. 多任務學習** | **(最終最佳模型)** 將分類任務拆解共同學習 | [`multi-task-learning.ipynb`](./multi-task-learning.ipynb) |
+
+ [**專題海報：**](./project_poster)
 
 ## 專題簡介
 
